@@ -22,6 +22,7 @@ resource "aws_instance" "demo_webserver" {
   ebs_optimized = each.value.ebs
   tags = {
     Name = "MyEC2Instance_${each.key}"
+    Env = "ProdEnv"
   }
   region = each.key
 
