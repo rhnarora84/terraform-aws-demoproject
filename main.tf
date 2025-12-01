@@ -23,6 +23,7 @@ resource "aws_instance" "demo_webserver" {
   tags = {
     Name = "MyEC2Instance_${each.key}"
     Env = "ProdEnv"
+    Branch = "Rohan"
   }
   region = each.key
 
